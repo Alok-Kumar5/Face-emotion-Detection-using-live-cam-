@@ -6,17 +6,17 @@ Description
 
 This project implements a CNN-based emotion detection system using Keras and OpenCV. 
 It can classify facial expressions into six categories: angry, fear, happy, neutral, sad, and surprise.
+It helps Businesses to avoid personal bias associated with human reviewers by using artificial intelligence (AI)–based sentiment analysis tools. As a result, companies get consistent and objective results when analyzing customers’ opinions.
 
 Features
-
 Emotion classification using a pre-trained CNN model Real-time emotion detection from webcam Facial detection using Haar cascade classifier (optional) Requirements
 
 Python 3 (tested with 3.x versions) 
-OpenCV library (pip install opencv-python) 
+OpenCV library (pip install Opencv-python) 
 Keras and its dependencies (pip install keras)
 NumPy (pip install numpy)
 Pandas (pip install pandas)
-tqdm (pip install tqdm) Installation
+tqdm (pip install tqdm) 
 
 Clone this repository to your local machine.
 
@@ -29,7 +29,7 @@ Data Preparation (Optional)
 
 This project assumes you have a pre-existing dataset of labeled facial images for training and testing. You'll need to:
 
-Download or create your own facial image dataset with emotions labeled appropriately. 
+Download or create your facial image dataset with emotions labeled appropriately. 
 Organize the dataset into folders named after the corresponding emotions. 
 Place the dataset folders within the Training and Testing directories of this repository. 
 Usage (without data preparation)
@@ -59,19 +59,19 @@ The code is well-structured and includes comments to enhance readability. Here's
 
 Data Preprocessing (if applicable)
 
-Defines functions to create DataFrames from image paths and labels (createdataframe). 
+Defines functions to create DataFrames from image paths and labels (create data frame). 
 Extracts features (grayscale images) from image paths (extract_features). 
 Applies Label Encoding to categorical labels (LabelEncoder).
 Converts labels to one-hot encoded vectors (to_categorical). Model Architecture
 
-Constructs a sequential CNN model with: Convolutional layers with ReLU activation for feature extraction. 
+Constructs a sequential CNN model with Convolutional layers with ReLU activation for feature extraction. 
 Max pooling layers for downsampling. Dropout layers for regularization. 
 Flatten layer to convert 2D feature maps to 1D vectors.
 Dense layers with ReLU activation for classification.
-Softmax output layer for probability distribution of emotions.
+Softmax output layer for the probability distribution of emotions.
 Training (if applicable)
 
-Compiles the model with Adam optimizer, categorical crossentropy loss, and accuracy metric.
+Compiles the model with Adam optimizer, categorical cross-entropy loss, and accuracy metric.
 Trains the model on the prepared training data with validation on the testing data.
 Saves the trained model weights (emotiondetector.h5) and architecture (emotiondetector.json). Real-Time Emotion Detection
 
